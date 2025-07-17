@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
-const index = pinecone.index(process.env.PINECONE_INDEX);
+const index = pinecone.index(process.env.PINECONE_INDEX_NAME);
 
 // 🔹 Embed text into vector
 async function embed(text) {
